@@ -1,0 +1,63 @@
+@media (min-width: 992px) {
+	#layoutSidenav #layoutSidenav_nav {
+		transform: translateX(0);
+	}
+	#layoutSidenav #layoutSidenav_content {
+		margin-left: 0;
+		transition: margin 0.15s ease-in-out;
+	}
+	.sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
+		transform: translateX(-305px);
+	}
+	.sb-sidenav-toggled #layoutSidenav #layoutSidenav_content {
+		margin-left: -305px;
+	}
+	.sb-sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
+		display: none;
+	}
+}
+
+@media (max-width: 991px) {
+	.auth-section .fxt-bg-wrap {
+		padding: 20px 30px 20px 0;
+	}
+	.auth-section .fxt-bg-color {
+		padding: 20px
+	}
+	.auth-section ul.fxt-socials {
+		padding: 0;
+	}
+	.auth-section .fxt-bg-img {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.auth-section .fxt-bg-wrap {
+		padding: 15px;
+	}
+	.auth-section .fxt-bg-color {
+		padding: 20px
+	}
+	.auth-section:before {
+		display: none;
+	}
+	.teamCSextion {
+		padding: 17px 27px;
+	}
+	.btn-theme-group {
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+
+@media(max-width: 576px) {
+    .contacts_card {
+        margin-bottom: 15px !important;
+    }
+  .auth-section ul.fxt-socials li {
+    margin-right: 2px;
+  }
+}

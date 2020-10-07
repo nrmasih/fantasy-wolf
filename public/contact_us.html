@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Fantasy Wolf</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <!-- Favicons -->
+      <link href="assets/images/favicon.png" rel="icon">
+      <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/dashboard.css">
+      <link rel="stylesheet" href="assets/css/fontFamily.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+      <link rel="stylesheet" href="assets/css/aos.css">
+   </head>
+   <body>
+      <header>
+         <nav class="sb-topnav navbar navbar-expand navbar-light bg-theme shadow-sm">
+            <button class="d-lg-none d-inline btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="javaScript:void(0)">
+            <span class="bx bx-menu"></span> 
+            </button><!-- Navbar Search-->
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.png" alt="Logo" data-aos="zoom-in" width="116px" class="aos-init aos-animate">
+            </a>
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="about_us.html">About Us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="contact_us.html">Contact Us</a>
+               </li>
+            </ul>
+            <div class="d-md-inline-block form-inline">
+               <div class="notiBox">
+                  <div class="dropdown py-0">
+                     <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" aria-expanded="false" class="btn text-white border-right border-radius-0">
+                     <i class="bx bx-bell"></i>
+                     </a>
+                     <ul class="dropdown-menu shadow-lg notifications" role="menu" aria-labelledby="dLabel">
+                        <div class="notification-heading">
+                           <h4 class="menu-title">Notifications</h4>
+                           <h4 class="menu-title pull-right">View all<i class="bx bx-right-arrow-alt"></i></h4>
+                        </div>
+                        <li class="divider"></li>
+                        <div class="notifications-wrapper">
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 · day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 · day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                        </div>
+                        <li class="divider"></li>
+                        <div class="notification-footer">
+                           <h4 class="menu-title mb-0">View all<i class="bx bx-right-arrow-alt"></i></h4>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+               <li class="nav-item dropdown">
+                  <a class="py-0 media dtan pl-0 text-white align-items-center nav-link dropdown-toggle" id="userDropdown" href="javaScript:void(0)" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <div class="media-body mr-2 font-13 sf-re">Jeanette Shelton</div>
+                     <div class="round2">
+                        <img class="mr-2" src="assets/images/profile_img.png" width="40" height="40" alt="avatar">
+                     </div>
+                  </a>
+                  <div class="dropdown-menu shadow-lg dropdown-menu shadow-lg-right" aria-labelledby="userDropdown">
+                     <a class="dropdown-item" href="edit_profile.html"><i class="mr-2 bx bx-edit-alt"></i> Edit Profile</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="index.html"><i class="mr-2 bx bx-log-out"></i>Logout</a>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <div id="layoutSidenav">
+         <div id="layoutSidenav_content">
+            <main>
+               <section>
+                  <div class="container">
+                     <div class="row mt-5">
+                        <div class="col-lg-10 m-auto text-center">
+                           <div class="contact_heading">
+                              <h1 class="contact_heading_txt">Let’s talk!</h1>
+                              <p class="contact_heading_para">We’d love to hear what you are working on. Drop us a note and we’ll<br> get back to you within 24 hours.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row py-4 border_bottom_grey">
+                        <div class="col-lg-4">
+                           <div class="py-5 px-3 grey_box_contact">
+                              <a href="mailto:Info@fantasyWolf.io">
+                                 <div class="new_project_box">
+                                    <div class="new_project_icon">
+                                       <span class="icon_bg_co">
+                                       <i class="bx bx-message-square-detail bx-2x"></i>
+                                       </span>
+                                    </div>
+                                    <div class="new_project_desc">
+                                       <p class="new_project_desc_head">Mail Us</p>
+                                       <h3 class="new_project_desc_link">Info@fantasyWolf.io</h3>
+                                    </div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 contact_sec_new_start">
+                           <div class="py-5 px-3 grey_box_contact">
+                              <a href="tel:+00 0000 000 000">
+                                 <div class="new_project_box">
+                                    <div class="new_project_icon">
+                                       <span class="icon_bg_co">
+                                       <i class="bx bx-phone bx-2x"></i>
+                                       </span>
+                                    </div>
+                                    <div class="new_project_desc">
+                                       <p class="new_project_desc_head">Call Us</p>
+                                       <h3 class="new_project_desc_link">+00 0000 000 000</h3>
+                                    </div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-lg-4">
+                           <div class="py-5 px-3 grey_box_contact">
+                              <a href="skype:Anmol3162?call">
+                                 <div class="new_project_box">
+                                    <div class="new_project_icon">
+                                       <span class="icon_bg_co">
+                                       <i class="bx bxl-skype bx-2x"></i>
+                                       </span>
+                                    </div>
+                                    <div class="new_project_desc">
+                                       <p class="new_project_desc_head">Skype</p>
+                                       <h3 class="new_project_desc_link">@skypeid</h3>
+                                    </div>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row my-4">
+                        <div class="col-lg-12">
+                           <div class="grey_box_contact">
+                              <div class="col-lg-10 m-auto">
+                                 <form method="post" id="contact_form">
+                                    <input type="hidden" name="_token" value="UsnxBWqepoAu6RFft8buyxDresXB7XYqdQwc9V0s">
+                                    <div class="row">
+                                       <div class="col-lg-6">
+                                          <div class="form-group">
+                                             <label>First Name</label>
+                                             <input type="text" name="name" id="name" placeholder="Enter your full name" class="form-control custom_txt_contact">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                          <div class="form-group">
+                                             <label>Email Id</label>
+                                             <input type="text" name="email" id="email" placeholder="Enter your emai id" class="form-control custom_txt_contact">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                          <div class="form-group">
+                                             <label>Mobile Number</label>
+                                             <input type="text" name="mobile" id="mobile" placeholder="Enter your mobile number" class="form-control custom_txt_contact">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                          <div class="form-group">
+                                             <label>Refrence</label>
+                                             <input type="text" name="about" id="about" placeholder="Where did you hear about us?" class="form-control custom_txt_contact">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-12">
+                                          <div class="form-group">
+                                             <label>Message</label>
+                                             <textarea placeholder="Enter your message" name="description" id="description" rows="3" class="form-control custom_txt_contact"></textarea>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row justify-content-center mt-4">
+                                       <div class="col-md-6 col-lg-4">
+                                          <button class="btn btn-block btn-primary btn-round-xl" type="submit">Submit</button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                  </div>
+               </section>
+            </main>
+            <footer class="pt-2 section footer-classic context-dark bg-theme">
+               <div class="container">
+                  <div class="row row-30">
+                     <div class="col-lg-4 col-md-12 col-xl-5">
+                        <div class="pr-xl-4">
+                           <a class="brand" href="index.html"><img class="brand-logo-light" src="assets/images/logo.png" alt="" width="140"></a>
+                           <p class="text-white mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                           <!-- Rights-->
+                           <p class="text-white rights"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>The Fantasy Wolf</span><span>. </span><span>All Rights Reserved.</span></p>
+                        </div>
+                     </div>
+                     <div class="mt-4 mt-sm-0 col-lg-3  col-md-5 col-xl-3">
+                        <h5>Contacts</h5>
+                        <dl class="contact-list">
+                           <dt>Address:</dt>
+                           <dd>Lorem Ipsum is simply dummy</dd>
+                        </dl>
+                        <dl class="contact-list">
+                           <dt>Email:</dt>
+                           <dd><a href="mailto:#">admin@gmail.com</a></dd>
+                        </dl>
+                        <dl class="contact-list">
+                           <dt>Phones:</dt>
+                           <dd><a href="tel:#">+00 000 0000 000</a> <span>or</span> <a href="tel:#">+00 000 0000 000</a>
+                           </dd>
+                        </dl>
+                     </div>
+                     <div class="mt-4 mt-sm-0 col-lg-3  col-md-5 col-xl-3">
+                        <h5>Links</h5>
+                        <ul class="nav-list">
+                           <li><a href="#">Home</a></li>
+                           <li><a href="about_us.html">About Us</a></li>
+                           <li><a href="contact_us.html">Contact Us</a></li>
+                           <li><a href="#">Terms and conditions</a></li>
+                           <li><a href="#">Privacy policy</a></li>
+                        </ul>
+                     </div>
+                     <div class="mt-4 mt-sm-0 col-4 col-lg-2  col-md-2 col-xl-1 no-gutters social-container">
+                  <div class="col"><a class="social-inner" href="#"><span class="bx bxl-facebook"></span></a></div>
+                  <div class="col"><a class="social-inner" href="#"><span class="bx bxl-instagram"></span></a></div>
+                  <div class="col"><a class="social-inner" href="#"><span class="bx bxl-twitter"></span></a></div>
+                  <div class="col"><a class="social-inner" href="#"><span class="bx bxl-google"></span></a></div>
+               </div>
+                  </div>
+               </div>
+               
+            </footer>
+         </div>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/aos.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

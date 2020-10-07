@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Fantasy Wolf</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <!-- Favicons -->
+      <link href="assets/images/favicon.png" rel="icon">
+      <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/dashboard.css">
+      <link rel="stylesheet" href="assets/css/fontFamily.css">
+      <link rel="stylesheet" href="assets/css/responsive.css">
+      <link rel="stylesheet" href="assets/css/aos.css">
+   </head>
+   <body>
+      <header>
+         <nav class="sb-topnav navbar navbar-expand navbar-light bg-theme shadow-sm">
+            <button class="d-lg-none d-inline btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="javaScript:void(0)">
+            <span class="bx bx-menu"></span> 
+            </button><!-- Navbar Search-->
+            <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.png" alt="Logo" data-aos="zoom-in" width="116px">
+            </a>
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="about_us.html">About Us</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="contact_us.html">Contact Us</a>
+               </li>
+            </ul>
+            <div class="d-md-inline-block form-inline">
+               <div class="notiBox">
+                  <div class="dropdown py-0">
+                     <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" aria-expanded="false" class="btn text-white border-right border-radius-0">
+                     <i class="bx bx-bell"></i>
+                     </a>
+                     <ul class="dropdown-menu shadow-lg notifications" role="menu" aria-labelledby="dLabel">
+                        <div class="notification-heading">
+                           <h4 class="menu-title">Notifications</h4>
+                           <h4 class="menu-title pull-right">View all<i class="bx bx-right-arrow-alt"></i></h4>
+                        </div>
+                        <li class="divider"></li>
+                        <div class="notifications-wrapper">
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 · day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 · day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                           <a class="content" href="#">
+                              <div class="notification-item">
+                                 <h4 class="item-title">Evaluation Deadline 1 <i class="bx bxs-caret-right-circle"></i> day ago</h4>
+                                 <p class="item-info">Marketing 101, Video Assignment</p>
+                              </div>
+                           </a>
+                        </div>
+                        <li class="divider"></li>
+                        <div class="notification-footer">
+                           <h4 class="menu-title mb-0">View all<i class="bx bx-right-arrow-alt"></i></h4>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+               <li class="nav-item dropdown">
+                  <a class="py-0 media dtan pl-0 text-white align-items-center nav-link dropdown-toggle" id="userDropdown" href="javaScript:void(0)" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <div class="media-body mr-2 font-13 sf-re">Jeanette Shelton</div>
+                     <div class="round2">
+                        <img class="mr-2" src="assets/images/profile_img.png" width="40" height="40" alt="avatar">
+                     </div>
+                  </a>
+                  <div class="dropdown-menu shadow-lg dropdown-menu shadow-lg-right" aria-labelledby="userDropdown">
+                     <a class="dropdown-item" href="edit_profile.html"><i class="mr-2 bx bx-edit-alt"></i> Edit Profile</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="index.html"><i class="mr-2 bx bx-log-out"></i>Logout</a>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <div id="layoutSidenav">
+         <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+               <div class="searcBar">
+                  <div class="d-flex">
+                     <div class="input-group theme-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text" id="basic-addon1"><i class="bx bx-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control border-0" placeholder="Search Message..." aria-label="Username" aria-describedby="basic-addon1">
+                     </div>
+                     <!--button class="ml-2 btn btn-primary btn-circle"><i class="bx bx-plus"></i></button-->
+                  </div>
+               </div>
+               <div class="inbox_chat">
+                  <div class="chat_list active_chat">
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                     <a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
+                        <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                        <div class="chat_ib">
+                           <h5>Jeanette Shelton <span class="cat_time">11:23AM</span></h5>
+                           <p>Three way to earn more...</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </nav>
+         </div>
+         <div id="layoutSidenav_content">
+            <main>
+               <div class="container-fluid px-0">
+                  <div class="container-fluid e-chat mt-4">
+                     <div class="row mx-0 mt-4">
+                        <div class="col-md-12 px-3">
+                           <div class="card">
+                              <div class="card-header msg_head">
+                                 <div class="d-flex bd-highlight justify-content-between align-items-center">
+                                    <div class="col d-flex">
+                                       <div class="img_cont">
+                                          <img src="assets/images/user2.png" class="rounded-circle user_img">
+                                          <span class="online_icon"></span>
+                                       </div>
+                                       <div class="user_info">
+                                          <span>Kobe Bryant </span>
+                                          <p>1767 Messages</p>
+                                       </div>
+                                    </div>
+                                    <button class="btn btn-sm btn-primary-outline btn-round d-flex flex-wrap mx-1"><i class="bx bx-doller mr-1"></i>Payment Request</button>
+                                    <button class="btn btn-sm btn-primary-outline btn-round d-flex flex-wrap mx-1"><i class="bx bx-window-close mr-1"></i>Close Thread</button>
+                                 </div>
+                                 <div class="action_menu" style="display: none;">
+                                    <ul>
+                                       <li><i class="fas fa-user-circle"></i> View profile</li>
+                                       <li><i class="fas fa-users"></i> Add to close friends</li>
+                                       <li><i class="fas fa-plus"></i> Add to group</li>
+                                       <li><i class="fas fa-ban"></i> Block</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="card-body msg_card_body">
+                                 <div class="d-flex justify-content-start mb-4">
+                                    <div class="img_cont_msg">
+                                       <img src="assets/images/user2.png" class="rounded-circle user_img_msg">
+                                    </div>
+                                    <div class="msg_cotainer">
+                                       Hi, how are you Jeanette?
+                                       <span class="msg_time">8:40 AM, Today</span>
+                                    </div>
+                                 </div>
+                                 <div class="d-flex justify-content-end mb-4">
+                                    <div class="msg_cotainer_send">
+                                       Hi Kobe i am good tnx how about you?
+                                       <span class="msg_time_send">8:55 AM, Today</span>
+                                    </div>
+                                    <div class="img_cont_msg">
+                                       <img src="assets/images/profile_img.png" class="rounded-circle user_img_msg">
+                                    </div>
+                                 </div>
+                                 <div class="d-flex justify-content-start mb-4">
+                                    <div class="img_cont_msg">
+                                       <img src="assets/images/user2.png" class="rounded-circle user_img_msg">
+                                    </div>
+                                    <div class="msg_cotainer">
+                                       I am good too, thank you for your chat team
+                                       <span class="msg_time">9:00 AM, Today</span>
+                                    </div>
+                                 </div>
+                                 <div class="d-flex justify-content-end mb-4">
+                                    <div class="msg_cotainer_send">
+                                       You are welcome
+                                       <span class="msg_time_send">9:05 AM, Today</span>
+                                    </div>
+                                    <div class="img_cont_msg">
+                                       <img src="assets/images/profile_img.png" class="rounded-circle user_img_msg">
+                                    </div>
+                                 </div>
+                                 <div class="d-flex justify-content-start mb-4">
+                                    <div class="img_cont_msg">
+                                       <img src="assets/images/user2.png" class="rounded-circle user_img_msg">
+                                    </div>
+                                    <div class="msg_cotainer">
+                                       I am looking for your next team
+                                       <span class="msg_time">9:07 AM, Today</span>
+                                    </div>
+                                 </div>
+                                 <div class="d-flex justify-content-end mb-4">
+                                    <div class="msg_cotainer_send">
+                                       Ok, thank you have a good day
+                                       <span class="msg_time_send">9:10 AM, Today</span>
+                                    </div>
+                                    <div class="img_cont_msg">
+                                       <img src="assets/images/profile_img.png" class="rounded-circle user_img_msg">
+                                    </div>
+                                 </div>
+                                 <div class="d-flex justify-content-start mb-4">
+                                    <div class="img_cont_msg">
+                                       <img src="assets/images/user2.png" class="rounded-circle user_img_msg">
+                                    </div>
+                                    <div class="msg_cotainer">
+                                       Bye, see you
+                                       <span class="msg_time">9:12 AM, Today</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="card-footer">
+                                 <div class="input-group">
+                                    <div class="input-group-append">
+                                       <div class="input-group-text attach_btn">
+                                          <div class="file-upload-wrapper" data-text="Select your file!">
+                                             <input name="file-upload-field" type="file" class="file-upload-field" value="">
+                                           <i class="bx bx-paperclip"></i>
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <input name="" class="form-control type_msg" placeholder="Type your message..." spellcheck="false" data-gramm="false">
+                                    <div class="input-group-append">
+                                       <span class="input-group-text send_btn"><i class="bx bx-send"></i></span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </main>
+         </div>
+      </div>
+      <footer class="pt-2 section footer-classic context-dark bg-theme">
+         <div class="container-fluid px-4">
+            <div class="row row-30 justify-content-center">
+               <div class="col-xl-3 col-md-12 col-xl-4">
+                  <div class="pr-xl-4 d-flex align-items-center">
+                     <a class="brand mr-3" href="index.html"><img class="brand-logo-light" src="assets/images/logo.png" alt="" width="140"></a>
+                     <p class="text-white mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                     <!-- Rights-->
+                  </div>
+                  <div class="col-12 mb-1 social-container d-flex">
+                     <div class="col"><a class="social-inner" href="#"><span class="bx bxl-facebook"></span></a></div>
+                     <div class="col"><a class="social-inner" href="#"><span class="bx bxl-instagram"></span></a></div>
+                     <div class="col"><a class="social-inner" href="#"><span class="bx bxl-twitter"></span></a></div>
+                     <div class="col"><a class="social-inner" href="#"><span class="bx bxl-google"></span></a></div>
+                  </div>
+               </div>
+               <div class="mt-4 mt-sm-0 col-lg-3  col-md-5 col-xl-3">
+                  <h5>Contacts</h5>
+                  <dl class="contact-list">
+                     <dd><strong class="mr-2">Address:</strong> Lorem Ipsum is simply dummy</dd>
+                  </dl>
+                  <dl class="contact-list">
+                     <dd><strong class="mr-2">Email:</strong><a href="mailto:#">admin@gmail.com</a></dd>
+                  </dl>
+                  <dl class="contact-list">
+                     <dd><strong class="mr-2">Phones:</strong><a href="tel:#">+00 000 0000 000</a> 
+                     </dd>
+                  </dl>
+               </div>
+               <div class="mt-4 mt-sm-0 col-lg-3  col-md-5 col-xl-3">
+                  <h5>Links</h5>
+                  <ul class="nav-list nav-inline">
+                     <li><a href="#">Home</a></li>
+                     <li><a href="about_us.html">About Us</a></li>
+                     <li><a href="contact_us.html">Contact Us</a></li>
+                     <li><a href="#">Terms and conditions</a></li>
+                     <li><a href="#">Privacy policy</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col">
+                  <p class="text-white rights mb-0 text-center"><span>©  </span><span class="copyright-year">2020</span><span> </span><span>The Fantasy Wolf</span><span>. </span><span>All Rights Reserved.</span></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+      <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/aos.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
