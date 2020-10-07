@@ -9,12 +9,19 @@ $(document).ready(function () {
     });
 
 
+    //**//
+    /*$("input").keyup(function(){
+        $("input").css("background-color", "pink");
+    });*/
+
+    //
+    
     $('#emailNotification').click(function(){
             if($(this).is(":checked")){
-                $("#result").html("Checkbox is checked.");
+               notification(1,$(this).attr('data'));
             }
             else if($(this).is(":not(:checked)")){
-                $("#result").html("Checkbox is unchecked.");
+               notification(0,$(this).attr('data'));
             }
      });
 
@@ -122,9 +129,87 @@ $(document).ready(function () {
             }
 
         });
-    });     
+    }); 
+
+
+    /*******ChangePassword********/ 
+    
+    $('.ChangePassword').click(function () {
+        $("#ChangePassword").validate({
+            rules : {
+                newpassword : {
+                    minlength : 3
+                },
+                cpassword : {
+                    minlength : 3,
+                    equalTo : "#newpassword"
+                }
+            },
+            submitHandler: function (form) {
+                var path = document.getElementById("base_url").value;
+                var action=$("#ChangePassword").attr('data');  
+                $.ajax({
+                    type: "POST",
+                    url: action,
+                    cache: false,
+                    data: new FormData(form),
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function () {
+                        $("#ajaxloader, #ajaxcover").show();                        
+                    },
+                    complete: function () {
+                        $("#ajaxloader, #ajaxcover").hide(); 
+                    },
+                    success: function (data) {
+                        if (data.status == 1) { 
+                            $('.msgdiv').show(); 
+                            var errhtml = data.message;
+                            toast(errhtml);
+                            //alert(errhtml);
+                            $(".response_msg").removeClass("alert-danger");
+                            $(".response_msg").addClass("alert-success");
+                            $('.response_msg').html(errhtml);
+                            setTimeout(function () {
+                                 window.location.href= data.response.url;
+                            },3000);
+                        }  else {
+                            $('.msgdiv').show();
+                            var errhtml = data.message;
+                            toast(errhtml);
+                            $(".response_msg").removeClass("alert-success");
+                            $(".response_msg").addClass("alert-danger");
+                            $('.response_msg').html(errhtml);
+                            setTimeout(function () {
+                               $('.msgdiv').show();
+                            },3000);
+                        }
+                    }
+                });
+                return false;
+            }
+
+        });
+    });
+
+    /***************/   
 
 });
+
+
+function notification(status,url) {
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var data = "status="+status+ '&_token=' + token;
+    jQuery.ajax({
+        type: "POST",
+        url: url,
+        data: data,
+        dataType: "json",
+        success: function (data) {
+            toast(data.message);
+        }
+    });
+}
 
 function getstatebyid(id,url) {
         var token = $('meta[name="csrf-token"]').attr('content');
@@ -155,5 +240,11 @@ function getcitybyid(id,url) {
         });
 }
 
-
+function toast(msg){
+    $().toasty({
+    message: msg,
+    autoHide: 3000,
+    position: "tr"
+    });     
+}
 

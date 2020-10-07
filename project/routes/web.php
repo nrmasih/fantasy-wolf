@@ -354,11 +354,12 @@ Route::prefix('admin')->group(function() {
     });
 
     //------------ ADMIN COUPON SECTION ENDS------------
-    //------------ ADMIN BLOG SECTION ------------
+    
+    
+    
+    // Route::group(['middleware' => 'permissions:master'], function() {
 
-    Route::group(['middleware' => 'permissions:blog'], function() {
-
-        Route::get('/blog/datatables', 'Admin\BlogController@datatables')->name('admin-blog-datatables'); //JSON REQUEST
+        /*Route::get('/blog/datatables', 'Admin\BlogController@datatables')->name('admin-blog-datatables'); //JSON REQUEST
         Route::get('/blog', 'Admin\BlogController@index')->name('admin-blog-index');
         Route::get('/blog/create', 'Admin\BlogController@create')->name('admin-blog-create');
         Route::post('/blog/create', 'Admin\BlogController@store')->name('admin-blog-store');
@@ -366,13 +367,37 @@ Route::prefix('admin')->group(function() {
         Route::post('/blog/edit/{id}', 'Admin\BlogController@update')->name('admin-blog-update');
         Route::get('/blog/delete/{id}', 'Admin\BlogController@destroy')->name('admin-blog-delete');
 
-        Route::get('/blog/category/datatables', 'Admin\BlogCategoryController@datatables')->name('admin-cblog-datatables'); //JSON REQUEST
-        Route::get('/blog/category', 'Admin\BlogCategoryController@index')->name('admin-cblog-index');
-        Route::get('/blog/category/create', 'Admin\BlogCategoryController@create')->name('admin-cblog-create');
-        Route::post('/blog/category/create', 'Admin\BlogCategoryController@store')->name('admin-cblog-store');
-        Route::get('/blog/category/edit/{id}', 'Admin\BlogCategoryController@edit')->name('admin-cblog-edit');
-        Route::post('/blog/category/edit/{id}', 'Admin\BlogCategoryController@update')->name('admin-cblog-update');
-        Route::get('/blog/category/delete/{id}', 'Admin\BlogCategoryController@destroy')->name('admin-cblog-delete');
+        Route::get('/master/category/datatables', 'Admin\MasterCategoryController@datatables')->name('admin-master-datatables'); //JSON REQUEST
+        Route::get('/master/category', 'Admin\MasterCategoryController@index')->name('admin-master-index');
+        Route::get('/master/category/create', 'Admin\MasterCategoryController@create')->name('admin-master-create');
+        Route::post('/master/category/create', 'Admin\MasterCategoryController@store')->name('admin-master-store');
+        Route::get('/master/category/edit/{id}', 'Admin\MasterCategoryController@edit')->name('admin-master-edit');
+        Route::post('/master/category/edit/{id}', 'Admin\MasterCategoryController@update')->name('admin-master-update');
+        Route::get('/master/category/delete/{id}', 'Admin\MasterCategoryController@destroy')->name('admin-master-delete');*/
+    //});
+    
+    
+    
+    
+    //------------ ADMIN BLOG SECTION ------------
+
+    Route::group(['middleware' => 'permissions:blog'], function() {
+
+        Route::get('/master/datatables', 'Admin\BlogController@datatables')->name('admin-blog-datatables'); //JSON REQUEST
+        Route::get('/master', 'Admin\BlogController@index')->name('admin-blog-index');
+        Route::get('/master/create', 'Admin\BlogController@create')->name('admin-blog-create');
+        Route::post('/master/create', 'Admin\BlogController@store')->name('admin-blog-store');
+        Route::get('/master/edit/{id}', 'Admin\BlogController@edit')->name('admin-blog-edit');
+        Route::post('/master/edit/{id}', 'Admin\BlogController@update')->name('admin-blog-update');
+        Route::get('/master/delete/{id}', 'Admin\BlogController@destroy')->name('admin-blog-delete');
+
+        Route::get('/master/category/datatables', 'Admin\BlogCategoryController@datatables')->name('admin-cblog-datatables'); //JSON REQUEST
+        Route::get('/master/category', 'Admin\BlogCategoryController@index')->name('admin-cblog-index');
+        Route::get('/master/category/create', 'Admin\BlogCategoryController@create')->name('admin-cblog-create');
+        Route::post('/master/category/create', 'Admin\BlogCategoryController@store')->name('admin-cblog-store');
+        Route::get('/master/category/edit/{id}', 'Admin\BlogCategoryController@edit')->name('admin-cblog-edit');
+        Route::post('/master/category/edit/{id}', 'Admin\BlogCategoryController@update')->name('admin-cblog-update');
+        Route::get('/master/category/delete/{id}', 'Admin\BlogCategoryController@destroy')->name('admin-cblog-delete');
     });
 
     //------------ ADMIN BLOG SECTION ENDS ------------
@@ -785,6 +810,8 @@ Route::prefix('admin')->group(function() {
 Route::prefix('user')->group(function() {
     
     //Ajax //
+    Route::post('/changePassword', 'User\UserController@changePassword')->name('user.changePassword');
+    Route::post('/emailNotification', 'User\UserController@emailNotification')->name('emailNotification');
     Route::get('/ajaxStateById', 'User\AjaxController@ajaxStateById')->name('ajaxState');
     Route::get('/ajaxCityById', 'User\AjaxController@ajaxCityById')->name('ajaxCity');
     
@@ -794,7 +821,12 @@ Route::prefix('user')->group(function() {
     Route::get('/edit-profile', 'User\UserController@profile')->name('edit-profile');
     Route::post('/update-photo', 'User\UserController@UpdatePhoto')->name('user.UpdatePhoto');
     Route::post('/update-profile', 'User\UserController@updateProfile')->name('user.updateProfile');
-
+    
+    // Post Listing //
+    
+    Route::get('/post-listing', 'User\UserController@postlisting')->name('user.postlisting');
+    
+    
     // User Dashboard
     Route::get('/dashboard', 'User\UserController@index')->name('user-dashboard');
 

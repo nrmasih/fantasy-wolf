@@ -703,3 +703,6 @@ p.new_project_desc_head {
     width: 20px;
   border-radius: 100px;
 }
+.social-container {
+    max-width: 350px;
+}

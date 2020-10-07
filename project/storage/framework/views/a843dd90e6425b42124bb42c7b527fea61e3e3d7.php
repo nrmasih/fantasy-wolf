@@ -81,7 +81,7 @@
                 <a class="py-0 media dtan pl-0 text-white align-items-center nav-link dropdown-toggle" id="userDropdown" href="javaScript:void(0)" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media-body mr-2 font-13 sf-re">Jeanette Shelton</div>
                     <div class="round2">
-                        <img class="mr-2" src="<?php echo e(url('public/assets/images/profile_img.png')); ?>" width="40" height="40" alt="avatar">
+                        <img class="mr-2" src="<?php echo e(url('public/uploads/users/thumbnail/'.Auth::user()->photo)); ?>" width="40" height="40" alt="<?php echo e(Auth::user()->name); ?>">
                     </div>
                 </a>
                 <div class="dropdown-menu shadow-lg dropdown-menu shadow-lg-right" aria-labelledby="userDropdown">

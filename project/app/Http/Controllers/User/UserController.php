@@ -24,6 +24,12 @@ class UserController extends Controller {
     public function __construct() {
         $this->middleware('auth');
     }
+    
+    
+    public function postlisting() {
+        $user = Auth::user();
+        return view('user.post-listing', compact('user'));
+    }
 
     public function index() {
         $user = Auth::user();
@@ -88,6 +94,65 @@ class UserController extends Controller {
             if (!empty($res)) {
                  $this->response['url'] = '';
                 $this->message = 'Profile updated successfully! ';
+                $this->status = 1;
+            } else {
+                $this->response = '';
+                $this->message = 'Something problem!';
+                $this->status = 0;
+            }
+        }
+        return response()->json(['status' => $this->status, 'message' => $this->message, 'response' => $this->response], $this->HTTP_status);
+    }
+    
+    
+    // Check Current Password //
+    public function changePassword(Request $request) {        
+        //User::where("id",Auth::user()->id)->where("password",bcrypt($request->oldpassword))->count()<1
+        $validator = Validator::make($request->all(), [
+                    'password' => 'required'
+        ]);
+        $user = User::find(Auth::user()->id);
+        if ($validator->fails()) {
+            $this->status = 0;
+            $this->message = $validator->errors()->all();
+            $this->response = '';        
+        }else if(!Hash::check($request->oldpassword,$user->password)){    
+            $this->status = 0;
+            $this->message = 'Current password does not match';
+            $this->response = '';
+        }  else {
+            $User = User::where("id",Auth::user()->id)->first();
+            $User->password=bcrypt($request->password);
+            $res = $User->save();
+            if (!empty($res)) {
+                $this->response['url'] = '';
+                $this->message = 'Password change successfully!';
+                $this->status = 1;
+            } else {
+                $this->response = '';
+                $this->message = 'Something problem!';
+                $this->status = 0;
+            }
+        }
+        return response()->json(['status' => $this->status, 'message' => $this->message, 'response' => $this->response], $this->HTTP_status);
+    }
+    
+    // Email Notification //
+    public function emailNotification(Request $request) {
+        $validator = Validator::make($request->all(), [
+                    'status' => 'required'
+        ]);
+        if ($validator->fails()) {
+            $this->status = 0;
+            $this->message = $validator->errors()->all();
+            $this->response = '';
+        }  else {
+            $User = User::where("id",Auth::user()->id)->first();
+            $User->mail_sent = $request->status;
+            $res = $User->save();
+            if (!empty($res)) {
+                $this->response['url'] = '';
+                $this->message = 'Email notification activate!';
                 $this->status = 1;
             } else {
                 $this->response = '';

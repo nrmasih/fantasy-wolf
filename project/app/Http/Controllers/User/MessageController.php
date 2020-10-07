@@ -26,7 +26,11 @@ class MessageController extends Controller {
         $HTML ='';        
         $user = User::orderBy('id', 'DESC')->get();
         foreach ($user as $r) {
+        if(!empty($r->photo)){
+        $path = url('public/uploads/users/thumbnail/'.$r->photo);
+        }else{
         $path = url('public/assets/images/account.png');
+        }
         $HTML .= '<a class="chat_people d-flex flex-wrap align-items-center" href="messageChatBox.html">
                         <div class="chat_img"> <img src="'.$path.'" alt="sunil" class="img-fluid"> </div>
                         <div class="chat_ib">

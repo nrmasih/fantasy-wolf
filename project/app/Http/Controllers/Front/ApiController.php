@@ -22,6 +22,7 @@ class ApiController extends Controller {
     }
     
     
+    
     public function resetPassword(Request $request) {
         $validator = Validator::make($request->all(), [
                     'password' => 'required'

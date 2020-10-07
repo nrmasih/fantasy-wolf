@@ -23,4 +23,5 @@ Route::Group(['prefix' => '/v1'], function () {
     Route::post('/forgotPassword', 'Front\ApiController@forgotPassword')->name('front.forgotPasswordForm');
     Route::post('/registerUser', 'Front\ApiController@register')->name('front.registerUser');
     Route::post('/userLogin', 'User\LoginController@userLogin')->name('user.userLogin');
+   
 });

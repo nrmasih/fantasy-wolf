@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     display: none;
-    z-index: 995;
+    z-index: 99999995;
 }
 .toasty_msgMeasureBox {
      display:inline-block;
@@ -18,7 +18,7 @@
     display:inline-block;
     position:fixed;
     text-align:left;
-    z-index: 1000;
+    z-index: 99999999;
     text-align: left;
 }
 .toasty_msgContainer.br{ right: 0px; bottom: 0; }

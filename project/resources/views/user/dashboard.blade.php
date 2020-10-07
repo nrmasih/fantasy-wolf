@@ -41,7 +41,7 @@
                   <div class="tab-content" id="pills-tabContent">
                      <div class="tab-pane fade show active" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
                         <div class="postLisitng">
-                           <a href="postListing.html" class="btn btn-sm btn-primary btn-round-xl d-flex flex-wrap mx-1"><i class="bx bx-user-plus mr-1"></i>Post a Listing</a>
+                           <a href="{{route('user.postlisting')}}" class="btn btn-sm btn-primary btn-round-xl d-flex flex-wrap mx-1"><i class="bx bx-user-plus mr-1"></i>Post a Listing</a>
                         </div>
                         <div class="row mx-0">
                            <div class="col-md-12 px-0">
@@ -319,25 +319,25 @@
                               <div class="bg-img-none col teamCSextion d-flex flex-wrap mb-4">
                                  <div class="col teamList d-flex flex-wrap align-items-center px-0">
                                     <div class="picx">
-                                       <img src="assets/images/user2.png" width="86">
+                                       <img src="{{url('public/uploads/users/thumbnail/'.Auth::user()->photo)}}" width="86">
                                     </div>
                                     <div class="ml-4 listName">
-                                       <h5 class="mb-0">Kobe Bryant</h5>
+                                       <h5 class="mb-0"> {{Auth::user()->name}} </h5>
                                        <div class="des">
-                                          <p><i class="bx bx-mail-send mr-1 h6 mb-0"></i>kobeBryant@mail.com</p>
-                                          <p><i class="h6 mb-0 mr-1">@</i>kobeBryant</p>
+                                          <p><i class="bx bx-mail-send mr-1 h6 mb-0"></i> {{Auth::user()->email}} </p>
+                                          <p><i class="h6 mb-0 mr-1">@</i>{{str_slug(Auth::user()->name)}}</p>
                                        </div>
                                     </div>
                                  </div>
                                  <div class="col d-flex flex-wrap align-items-center ml-4">
                                     <div class="ml-4 listName mr-4">
                                        <h5>About</h5>
-                                       <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.</p>
+                                       <p class="mb-0"> {{Auth::user()->bio}}  </p>
                                     </div>
                                  </div>
                                  <div class="col-lg-3  px-0 d-flex flex-wrap align-items-center ml-lg-4  btn-theme-group">
                                     <div class="mt-3 mt-lg-0 ml-lg-3 d-flex flex-wrap">
-                                       <a class="btn btn-sm btn-primary btn-round d-flex flex-wrap mx-1" href="edit_profile.html"><i class="bx bx-pencil mr-1"></i>Edit Profile</a>
+                                       <a data-toggle="modal" class="btn btn-sm btn-primary btn-round d-flex flex-wrap mx-1" href="#profileChanges"><i class="bx bx-pencil mr-1"></i>Edit Profile</a>
                                     </div>
                                  </div>
                               </div>
@@ -387,7 +387,7 @@
                                                       <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -401,17 +401,17 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle"><button class="shadow-lg fav-btn fav-active btn btn-primary btn-round d-flex flex-wrap mx-1"><i class="bx bx-heart"></i></button></td>
                                                 </tr>
-                                                <tr>
+                                                 <tr>
                                                    <td class="align-middle">
-                                                      <span>2</span>
+                                                      <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -425,17 +425,17 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle"><button class="shadow-lg fav-btn fav-active btn btn-primary btn-round d-flex flex-wrap mx-1"><i class="bx bx-heart"></i></button></td>
                                                 </tr>
-                                                <tr>
+                                                 <tr>
                                                    <td class="align-middle">
-                                                      <span>3</span>
+                                                      <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -449,17 +449,17 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle"><button class="shadow-lg fav-btn fav-active btn btn-primary btn-round d-flex flex-wrap mx-1"><i class="bx bx-heart"></i></button></td>
                                                 </tr>
-                                                <tr>
+                                                 <tr>
                                                    <td class="align-middle">
-                                                      <span>4</span>
+                                                      <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -473,35 +473,12 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle"><button class="shadow-lg fav-btn fav-active btn btn-primary btn-round d-flex flex-wrap mx-1"><i class="bx bx-heart"></i></button></td>
                                                 </tr>
-                                                <tr>
-                                                   <td class="align-middle">
-                                                      <span>5</span>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <h5>Jeanette Shelton</h5>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Lorem ipsum dolor sit.</p>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle"><button class="shadow-lg fav-btn fav-active btn btn-primary btn-round d-flex flex-wrap mx-1"><i class="bx bx-heart"></i></button></td>
-                                                </tr>
+                                                
                                              </tbody>
                                           </table>
                                        </div>
@@ -533,7 +510,7 @@
                                                       <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -547,17 +524,17 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle">$15</td>
                                                 </tr>
-                                                <tr>
+                                                 <tr>
                                                    <td class="align-middle">
-                                                      <span>2</span>
+                                                      <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -571,41 +548,17 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle">$15</td>
                                                 </tr>
-                                                <tr>
+                                                 <tr>
                                                    <td class="align-middle">
-                                                      <span>3</span>
+                                                      <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <h5>Jeanette Shelton</h5>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Lorem ipsum dolor sit.</p>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">$15</td>
-                                                </tr>
-                                                <tr>
-                                                   <td class="align-middle">
-                                                      <span>4</span>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -619,31 +572,7 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">$15</td>
-                                                </tr>
-                                                <tr>
-                                                   <td class="align-middle">
-                                                      <span>5</span>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <h5>Jeanette Shelton</h5>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Lorem ipsum dolor sit.</p>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle">$15</td>
@@ -679,7 +608,7 @@
                                                       <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -693,17 +622,18 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle">$15</td>
                                                 </tr>
+                                                
                                                 <tr>
                                                    <td class="align-middle">
-                                                      <span>2</span>
+                                                      <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -717,41 +647,18 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle">$15</td>
                                                 </tr>
+                                                
                                                 <tr>
                                                    <td class="align-middle">
-                                                      <span>3</span>
+                                                      <span>1</span>
                                                    </td>
                                                    <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <h5>Jeanette Shelton</h5>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Lorem ipsum dolor sit.</p>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">$15</td>
-                                                </tr>
-                                                <tr>
-                                                   <td class="align-middle">
-                                                      <span>4</span>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
+                                                      <div class="chat_img"> <img src="{{url('public/assets/images/profile_img.png')}}" alt="sunil" class="img-fluid"> </div>
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="chat_ib px-0">
@@ -765,35 +672,12 @@
                                                    </td>
                                                    <td class="align-middle">
                                                       <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
+                                                         <img src="{{url('public/assets/images/teamLogo.png')}}" class="img-fluid">
                                                       </div>
                                                    </td>
                                                    <td class="align-middle">$15</td>
                                                 </tr>
-                                                <tr>
-                                                   <td class="align-middle">
-                                                      <span>5</span>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_img"> <img src="assets/images/profile_img.png" alt="sunil" class="img-fluid"> </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <h5>Jeanette Shelton</h5>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="chat_ib px-0">
-                                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Lorem ipsum dolor sit.</p>
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">
-                                                      <div class="team-logo-xs">
-                                                         <img src="assets/images/teamLogo.png" class="img-fluid">
-                                                      </div>
-                                                   </td>
-                                                   <td class="align-middle">$15</td>
-                                                </tr>
+                                                
                                              </tbody>
                                           </table>
                                        </div>
@@ -809,5 +693,36 @@
          </div>
       </div>
 
-
+      <!-- Profile Image Changes -->
+        <div id="profileChanges" class="modal fade"> 
+            <div class="modal-dialog"> 
+                <div class="modal-content"> 						
+                    <div class="modal-body"> 
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-hidden="true">×</button>
+                              
+                            <div class="container">
+                                <h4> Change Profile </h4>
+                                <form id="userProfilePicture" method="POST" data="{{route('user.UpdatePhoto')}}" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        {{ csrf_field() }}
+                                        <label for="email">Choose image:</label>
+                                        <input  class="form-control" type="file" id="photo" name="photo" accept="image/x-png,image/gif,image/jpeg" required="">
+                                    </div> 
+                                    <button type="submit" class="btn btn-primary userProfilePicture">Submit</button>
+                                </form>
+                            </div>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+        <!-- End Profile Image Changes -->
+        
+        
+        @section('scripts')
+        <script src="{{asset('public/assets/js/UserFuncton.js?v='.rand())}}"></script>
+        @endsection
+        
 @endsection

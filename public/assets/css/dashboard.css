@@ -126,9 +126,9 @@ body {
     padding-left: 0;
     min-height: 60px;
     z-index: 1039;
-    border-radius: 20px;
+/*    border-radius: 20px;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;*/
 }
 
 .sb-topnav .navbar-brand {
@@ -1091,12 +1091,13 @@ Message bot
     padding-top: 0;
     display: flex;
     background: #3090b0;
-    padding: 3px 16px;
+    padding: 1px 9px;
     border-radius: 100px;
-    margin: 3px;
+    margin: 1px 0px;
     line-height: normal;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
 }
 
 .footer-classic .nav-list li a:hover:before {

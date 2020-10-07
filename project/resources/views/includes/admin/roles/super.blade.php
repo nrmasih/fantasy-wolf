@@ -13,8 +13,21 @@
     </li>
 
    
-    
     <li >
+        <a href="#blog" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
+            <i class="fas fa-fw fa-newspaper"></i>{{ 'Master' }}
+        </a>
+        <ul class="collapse list-unstyled" id="blog" data-parent="#accordion">
+            <li>
+                <a href="{{ route('admin-cblog-index') }}"><span>{{ __('Categories') }}</span></a>
+            </li>
+            <li>
+                <a href="{{ route('admin-blog-index') }}"><span>{{ __('Master') }}</span></a>
+            </li>
+        </ul>
+    </li>
+    
+    <li style="display: none;">
         <a href="#blog" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
             <i class="fas fa-fw fa-newspaper"></i>{{ __('Blog') }}
         </a>
@@ -44,23 +57,15 @@
             <li>
                 <a href="{{ route('admin-gs-load') }}"><span>{{ __('Loader') }}</span></a>
             </li>
-
-
-            <li>
-                <a href="{{ route('admin-pick-index') }}"><span>{{ __('Pickup Locations') }}</span></a>
-            </li>
+           
             <li>
             <a href="{{ route('admin-gs-contents') }}"><span>{{ __('Website Contents') }}</span></a>
             </li>
             <li>
                 <a href="{{ route('admin-gs-footer') }}"><span>{{ __('Footer') }}</span></a>
-            </li>
-            
+            </li>          
 
-            <li>
-                <a href="{{ route('admin-gs-popup') }}"><span>{{ __('Popup Banner') }}</span></a>
-            </li>
-
+           
 
             <li>
                 <a href="{{ route('admin-gs-error-banner') }}"><span>{{ __('Error Banner') }}</span></a>
@@ -101,9 +106,7 @@
             <li>
                 <a href="{{ route('admin-page-index') }}"><span>{{ __('Other Pages') }}</span></a>
             </li>
-            <li>
-                <a href="{{ route('admin-sb-large') }}"><span>{{ __('Extra Content') }}</span></a>
-            </li>
+            
         </ul>
     </li>
     <li>

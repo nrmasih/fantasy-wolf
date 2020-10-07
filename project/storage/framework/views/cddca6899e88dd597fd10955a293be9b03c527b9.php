@@ -44,10 +44,10 @@
                                            <img id="UserProfilePic" src="<?php echo e(url('public/uploads/users/thumbnail/'.Auth::user()->photo)); ?>" width="86">
                                        </div>
                                        <div class="ml-4 listName">
-                                          <h5 class="mb-0">Jeanette Shelton</h5>
+                                          <h5 class="mb-0"> <?php echo e(Auth::user()->name); ?> </h5>
                                           <div class="des">
-                                             <p><i class="bx bx-mail-send mr-1 h6 mb-0"></i>jeanetteShelton@mail.com</p>
-                                             <p><i class="h6 mb-0 mr-1">@</i>JeanetteShelton</p>
+                                             <p><i class="bx bx-mail-send mr-1 h6 mb-0"></i> <?php echo e(Auth::user()->email); ?> </p>
+                                             <p><i class="h6 mb-0 mr-1">@</i> JeanetteShelton </p>
                                           </div>
                                        </div>
                                     </div>
@@ -164,7 +164,7 @@
                                     <ul class="list-group w-100">
                                        <li for="exampleCheck1" class="switch list-group-item ">
                                           <label class="d-flex flex-wrap justify-content-between align-items-center">Email Notification
-                                              <input name="emailNotification" type="checkbox" id="emailNotification" >
+                                              <input data="<?php echo e(route('emailNotification')); ?>" name="emailNotification" type="checkbox" id="emailNotification" >
                                           <span class="slider"></span>
                                           </label>
                                        </li>
@@ -175,26 +175,27 @@
                            <div class="row mx-0 mt-4">
                               <div class="col-md-12 px-3">
                                  <div class="bg-img-none col teamCSextion d-flex flex-wrap mb-4 py-4">
-                                    <form class="form w-100" novalidate="">
+                                     <form class="form w-100" id="ChangePassword" novalidate="" method="POST" data="<?php echo e(route('user.changePassword')); ?>" enctype="multipart/form-data">
+                                       <?php echo e(csrf_field()); ?> 
                                        <div class="row">
                                           <div class="col">
                                              <div class="row">
                                                 <div class="col-md-6 col-lg-4">
                                                    <div class="form-group">
                                                       <label>Current Password</label>
-                                                      <input class="form-control" type="password" name="fNAme" placeholder="Enter your current password" value="">
+                                                      <input class="form-control" type="password" name="oldpassword" id="oldpassword" placeholder="Enter your current password" value="" required="required">
                                                    </div>
                                                 </div>
                                                 <div class="col-md-6 col-lg-4">
                                                    <div class="form-group">
                                                       <label>New Password</label>
-                                                      <input class="form-control" type="password" name="lNAme" placeholder="Enter your new password" value="">
+                                                      <input class="form-control" type="password" name="password" id="newpassword" placeholder="Enter your new password" value="" required="required">
                                                    </div>
                                                 </div>
                                                 <div class="col-md-6 col-lg-4">
                                                    <div class="form-group">
                                                       <label>confirm password</label>
-                                                      <input class="form-control" type="password" name="username" placeholder="Confirm your new password" value="">
+                                                      <input class="form-control" type="password" name="cpassword" id="cpassword" placeholder="Confirm your new password" value="" required="required">
                                                    </div>
                                                 </div>
                                              </div>
@@ -202,7 +203,7 @@
                                        </div>
                                        <div class="row justify-content-center mt-3">
                                           <div class="col-md-6 col-lg-4">
-                                             <button class="btn btn-block btn-primary btn-round-xl" type="submit">Save Changes</button>
+                                             <button class="btn btn-block btn-primary btn-round-xl ChangePassword" type="submit">Save Changes</button>
                                           </div>
                                        </div>
                                     </form>
