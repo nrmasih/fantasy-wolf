@@ -5,7 +5,7 @@
     <section class="fxt-template-animation auth-section loaded">
          <div class="container-fluid">
             <div class="row justify-content-center">
-               <div class="col-md-6 col-12 order-md-1 fxt-bg-color">
+               <div class="col-xl-6 col-lg-8 col-md-10 col-12 order-md-1 fxt-bg-color">
                   <div class="fxt-content aos-init aos-animate " data-aos="fade-in">
                      <a href="{{url('/')}}" class="fxt-logo">
                      <img src="{{asset('assets/images/'.$gs->logo)}}" alt="Logo" data-aos="zoom-in">
@@ -39,7 +39,7 @@
                            <div class="form-group">
                               <label for="password" class="input-label">Confirm Password</label>                                               
                               <div class="input-group align-items-center" id="show_hide_password2">
-                                 <input id="password" type="password" class="form-control" name="cpassword" placeholder="Enter your confirm password" required="required">
+                                 <input id="password" type="password" class="form-control" name="cpassword" placeholder="Re-enter your password" required="required">
                                  <div class="input-group-addon">
                                     <a href=""><i class="fa fa-eye-slash " aria-hidden="true"></i></a>
                                  </div>

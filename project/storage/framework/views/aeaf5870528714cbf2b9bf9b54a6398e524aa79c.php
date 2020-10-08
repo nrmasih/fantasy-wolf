@@ -32,7 +32,7 @@
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
-                        <div class="container-fluid e-changePassword mt-4">
+                        <div class="container-fluidd e-changePassword mt-4">
                             <ul class="theme-pills nav nav-pills px-0" id="pills-tab2" role="tablist">
                                 <li class="nav-item col-md-6 px-3">
                                     <a class="tabs noleftBg col teamCSextion d-flex flex-wrap mb-4 align-items-center active" id="pills-sell-tab" data-toggle="pill" href="#pills-sell" role="tab" aria-controls="pills-sell" aria-selected="true">

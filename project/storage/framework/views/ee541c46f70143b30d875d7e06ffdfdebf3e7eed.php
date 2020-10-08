@@ -3,7 +3,7 @@
      <section class="fxt-template-animation auth-section loaded">
          <div class="container-fluid">
             <div class="row justify-content-center">
-               <div class="col-md-6 col-12 order-md-1 fxt-bg-color">
+               <div class="col-xl-6 col-lg-8 col-md-10 col-12 order-md-1 fxt-bg-color">
                   <div class="fxt-content aos-init aos-animate " data-aos="fade-in">
                      <a href="<?php echo e(url('/')); ?>" class="fxt-logo">
                      <img src="<?php echo e(asset('assets/images/'.$gs->logo)); ?>" alt="Logo" data-aos="zoom-in">

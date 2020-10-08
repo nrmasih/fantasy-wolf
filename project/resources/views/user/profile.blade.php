@@ -36,11 +36,11 @@
                   </ul>
                   <div class="tab-content" id="pills-tabContent">
                      <div class="tab-pane fade show active" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
-                        <div class="container-fluid e-changePassword mt-4">
+                        <div class="container-fluidd e-changePassword mt-4">
                            <div class="row mx-0 mt-4">
                               <div class="col-md-12 px-3">
                                  <div class="bg-img-none col teamCSextion d-flex flex-wrap mb-4">
-                                    <div class="col teamList mx-w-none d-flex flex-wrap align-items-center px-0">
+                                    <div class="col-md-9 col-xl-4 teamList d-flex flex-wrap align-items-center px-0 order-xl-1 order-1">
                                        <div class="picx">
                                            <img id="UserProfilePic" src="{{url('public/uploads/users/thumbnail/'.Auth::user()->photo)}}" width="86">
                                        </div>
@@ -52,7 +52,7 @@
                                           </div>
                                        </div>
                                     </div>
-                                    <div class="col  px-0 d-flex flex-wrap align-items-center ml-lg-4  btn-theme-group justify-content-end">
+                                    <div class="col-md-3 col-lg-4 col-xl-2 px-0 d-flex flex-wrap align-items-center ml-lg-4  btn-theme-group order-xl-3 order-2 justify-content-start justify-content-sm-end">
                                        <div class="mt-3 mt-lg-0 ml-lg-3 d-flex flex-wrap">
                                           <a data-toggle="modal" class="btn btn-sm btn-primary btn-round d-flex flex-wrap mx-1" href="#profileChanges"><i class="bx bx-camera mr-1"></i>Edit Picture</a>
                                        </div>
@@ -158,7 +158,7 @@
                         </div>
                      </div>
                      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                        <div class="container-fluid e-changePassword mt-4">
+                        <div class="container-fluidd e-changePassword mt-4">
                            <div class="row mx-0 mt-4 justify-content-center">
                               <div class="col-md-6 px-3">
                                  <div class="bg-img-none col teamCSextion d-flex flex-wrap mb-4 py-4 justify-content-center">
@@ -195,8 +195,8 @@
                                                 </div>
                                                 <div class="col-md-6 col-lg-4">
                                                    <div class="form-group">
-                                                      <label>confirm password</label>
-                                                      <input class="form-control" type="password" name="cpassword" id="cpassword" placeholder="Confirm your new password" value="" required="required">
+                                                      <label>Confirm password</label>
+                                                      <input class="form-control" type="password" name="cpassword" id="cpassword" placeholder="Re-enter your password" value="" required="required">
                                                    </div>
                                                 </div>
                                              </div>

@@ -7,9 +7,9 @@ body {
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav,
 .sb-nav-fixed .sb-topnav {
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+    top: 0px;
+    right: 0px;
+    left: 0px;
     z-index: 1030;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .bg-theme {
-    background: #20728d
+    background: rgb(32, 114, 141);
 }
 
 #layoutAuthentication {
@@ -34,12 +34,12 @@ body {
 }
 
 #layoutAuthentication #layoutAuthentication_content {
-    min-width: 0;
+    min-width: 0px;
     flex-grow: 1;
 }
 
 #layoutAuthentication #layoutAuthentication_footer {
-    min-width: 0;
+    min-width: 0px;
 }
 
 #layoutSidenav {
@@ -49,10 +49,10 @@ body {
 #layoutSidenav #layoutSidenav_nav {
     flex-basis: 305px;
     flex-shrink: 0;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out 0s;
     z-index: 1038;
     transform: translateX(-305px);
-    border-left: 1px solid #EBEBEB;
+    border-left: 1px solid rgb(235, 235, 235);
 }
 
 #layoutSidenav #layoutSidenav_content {
@@ -60,28 +60,28 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 0;
+    min-width: 0px;
     flex-grow: 1;
-    /* min-height: calc(100vh - 60px); */
     margin-left: -305px;
+    min-height: calc(100vh - 165px);
 }
 
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
-    transform: translateX(0);
+    transform: translateX(0px);
 }
 
-.sb-sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
+.sb-sidenav-toggled #layoutSidenav #layoutSidenav_content::before {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: rgb(0, 0, 0);
     z-index: 1037;
     opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out 0s;
 }
 
 .sb-nav-fixed .sb-topnav {
@@ -110,12 +110,12 @@ body {
 }
 
 #layoutError #layoutError_content {
-    min-width: 0;
+    min-width: 0px;
     flex-grow: 1;
 }
 
 #layoutError #layoutError_footer {
-    min-width: 0;
+    min-width: 0px;
 }
 
 .img-error {
@@ -123,19 +123,16 @@ body {
 }
 
 .sb-topnav {
-    padding-left: 0;
+    padding-left: 0px;
     min-height: 60px;
     z-index: 1039;
-/*    border-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;*/
 }
 
 .sb-topnav .navbar-brand {
     width: 305px;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin: 0;
+    margin: 0px;
 }
 
 .sb-topnav.navbar-dark #sidebarToggle {
@@ -143,21 +140,20 @@ body {
 }
 
 .sb-topnav.navbar-light #sidebarToggle {
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     font-size: 24px;
 }
 
 .sb-sidenav {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     height: 100%;
-    flex-wrap: nowrap;
-    padding: 0;
+    padding: 0px;
 }
 
 .theme-group {
-    background: #EDEEF0;
-    border: 0;
+    background: rgb(237, 238, 240);
+    border: 0px;
     min-height: 42px;
     border-radius: 100px;
 }
@@ -168,7 +164,7 @@ body {
 
 .input-group-text {
     background: transparent;
-    border: 0;
+    border: 0px;
     padding: 5px 17px 5px 20px;
 }
 
@@ -192,14 +188,14 @@ input.form-control {
 
 .searcBar {
     padding: 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(204, 204, 204);
 }
 
 .chat_img {
     width: 42px;
     height: 42px;
     border-radius: 100px;
-    background: #C4C4C4;
+    background: rgb(196, 196, 196);
 }
 
 .chat_img img {
@@ -209,7 +205,7 @@ input.form-control {
 .chat_ib {
     width: 100%;
     max-width: calc(100% - 42px);
-    padding: 0 12px;
+    padding: 0px 12px;
 }
 
 .inbox_chat {
@@ -218,17 +214,17 @@ input.form-control {
 
 .chat_people {
     padding: 0.75rem 20px;
-    color: #212529;
+    color: rgb(33, 37, 41);
 }
 
 .chat_people:hover {
-    background: #edeef0;
+    background: rgb(237, 238, 240);
     text-decoration: none;
-    color: #212529;
+    color: rgb(33, 37, 41);
 }
 
 .chat_people a {
-    padding: 0 20px;
+    padding: 0px 20px;
 }
 
 .chat_ib h5 {
@@ -236,51 +232,51 @@ input.form-control {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
+    margin: 0px;
 }
 
 .chat_ib p {
-    color: #828282;
+    color: rgb(130, 130, 130);
     font-size: 14px;
-    margin: 0;
+    margin: 0px;
 }
 
 span.cat_time {
-    color: #828282;
+    color: rgb(130, 130, 130);
     font-size: 11px;
 }
 
 .sb-sidenav-dark {
-    background-color: #212529;
+    background-color: rgb(33, 37, 41);
     color: rgba(255, 255, 255, 0.5);
 }
 
 .sb-sidenav-dark .sb-sidenav-footer {
-    background-color: #343a40;
+    background-color: rgb(52, 58, 64);
 }
 
 .sb-sidenav-light {
-    background-color: #ffffff;
-    color: #212529;
-    border-right: 1px solid #EBEBEB;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 37, 41);
+    border-right: 1px solid rgb(235, 235, 235);
 }
 
 .sb-sidenav-light .sb-sidenav-footer {
-    background-color: #e9ecef;
+    background-color: rgb(233, 236, 239);
 }
 
 .form-control {
-    border-width: 0 0 1px 0px;
-    border-radius: 0;
-    padding-left: 0;
-    padding-right: 0;
+    border-width: 0px 0px 1px;
+    border-radius: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     background: transparent;
 }
 
 .form-control:focus,
 .form-control:hover {
     box-shadow: none;
-    border-color: #54b7ff;
+    border-color: rgb(84, 183, 255);
     background: transparent;
 }
 
@@ -288,11 +284,9 @@ footer {
     font-size: 14px;
 }
 
-/* CSS used here will be applied after bootstrap.css */
-
 .notiBox .dropdown {
     display: inline-block;
-    margin-left: 0;
+    margin-left: 0px;
     padding: 10px;
 }
 
@@ -301,9 +295,10 @@ footer {
 }
 
 .notiBox .notifications {
-    min-width: 420px;
-    right: 0;
+    min-width: 240px;
+    right: 0px;
     left: initial;
+    padding: 0;
 }
 
 .notiBox .notifications-wrapper {
@@ -312,9 +307,10 @@ footer {
 }
 
 .notiBox .menu-title {
-    color: #20728d;
+    color: rgb(32, 114, 141);
     font-size: 16px;
     display: inline-block;
+    margin: 0;
 }
 
 .notiBox .bx-right-arrow-alt {
@@ -323,42 +319,43 @@ footer {
 
 .notiBox .notification-heading,
 .notification-footer {
-    padding: 2px 10px;
+    padding: 7px 10px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
 }
 
 .notiBox .dropdown-menu.divider {
-    margin: 5px 0;
+    margin: 5px 0px;
 }
 
 .notiBox .item-title {
-    font-size: 14px;
-    color: #000;
-    margin: 0;
+    font-size: 13px;
+    color: rgb(31 112 138);
+    margin: 0px;
 }
 
 .notiBox .notifications a.content {
     text-decoration: none;
-    background: #ccc;
+    background: rgb(204, 204, 204);
 }
 
 .notiBox .notification-item {
     padding: 5px 10px;
     margin: 5px;
-    background: #e9ecef;
-    border-radius: 4px;
+    border-bottom: 1px solid rgb(233, 236, 239);
+    border-radius: 0;
 }
 
 .notiBox .notification-item p {
-    margin: 0;
-    font-size: 12px;
+    margin: 0px;
+    font-size: 11px;
 }
 
 .feed_filter {
-    background: #F6F7F7;
+    background: rgb(246, 247, 247);
     min-height: 90px;
-    padding: 0 40px;
+    padding: 0px 40px;
 }
 
 .feed_filter label {
@@ -366,7 +363,7 @@ footer {
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
-    color: #230026;
+    color: rgb(35, 0, 38);
     opacity: 0.7;
 }
 
@@ -375,48 +372,36 @@ footer {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
-    color: #230026;
+    color: rgb(35, 0, 38);
 }
 
 .theme-pills {
-    /* height: 50px; */
-    padding: 10px 20px 0 20px;
+    padding: 10px 20px 0px;
 }
 
 .theme-pills.nav-pills .nav-link.active {
     background: transparent;
-    color: #20728d;
     border-bottom: 4px solid;
-    font-weight: 500;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
     letter-spacing: 0.02em;
-    color: #20728d;
+    color: rgb(32, 114, 141);
     opacity: 1;
 }
 
 .theme-pills.nav-pills .nav-link {
-    color: #1b1b1b;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    /* identical to box height */
-    letter-spacing: 0.02em;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    /* identical to box height */
     letter-spacing: 0.02em;
-    color: #000000;
+    color: rgb(0, 0, 0);
     opacity: 0.5;
 }
 
 .feed_filter .theme-group {
-    max-width: 300px;
+    max-width: 295px;
     width: 100vw;
 }
 
@@ -425,8 +410,7 @@ footer {
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
-    /* identical to box height */
-    color: #230026;
+    color: rgb(35, 0, 38);
     opacity: 0.3;
 }
 
@@ -436,45 +420,42 @@ footer {
 
 .btn-round {
     border-radius: 100px;
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
-    /* identical to box height */
     display: flex;
     align-items: center;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: rgb(255, 255, 255);
     padding: 5px 12px;
 }
 
 .teamCSextion {
-    background-image: url(../../assets/images/bg-1.png), url(../../assets/images/player_tran.png);
+    background-image: url("../../assets/images/bg-1.png"), url("../../assets/images/player_tran.png");
     background-position: left bottom, right top;
     background-repeat: no-repeat, no-repeat;
     background-size: contain, contain;
     padding: 17px 27px 17px 47px;
-    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    box-shadow: rgba(50, 50, 71, 0.08) 0px 16px 16px, rgba(50, 50, 71, 0.08) 0px 24px 32px;
     border-radius: 6px;
 }
 
 .teamCSextion2 {
-    background-image: url(../../assets/images/bg-2.png), url(../../assets/images/player_tran.png);
+    background-image: url("../../assets/images/bg-2.png"), url("../../assets/images/player_tran.png");
 }
 
 .teamCSextion2.noleftBg,
 .teamCSextion.noleftBg {
-    background-image: url(), url(../../assets/images/player_tran.png);
+    background-image: url(""), url("../../assets/images/player_tran.png");
     padding-left: 30px;
 }
 
 .teamList {
     max-width: 300px;
     width: 100%;
-    border-right: 1px solid #f5f5f5;
+    border-right: 1px solid rgb(245, 245, 245);
     display: flex;
     align-items: center;
     position: relative;
@@ -485,7 +466,7 @@ footer {
 }
 
 .bg-img-none {
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 
 .bg-img-none p {
@@ -495,11 +476,10 @@ footer {
 
 .teamList .picx {
     flex: 0 1 auto;
-    width: 86px;
     position: relative;
     width: 86px;
     height: 86px;
-    background: #C4C4C4;
+    background: rgb(196, 196, 196);
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 100px;
 }
@@ -513,7 +493,6 @@ footer {
 
 .teamList .listName {
     max-width: calc(100% - 110px);
-    
 }
 
 .teamList .listName .des p {
@@ -521,8 +500,8 @@ footer {
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.02em;
-    color: #230026;
-    margin: 4px 0 0 0;
+    color: rgb(35, 0, 38);
+    margin: 4px 0px 0px;
     max-width: 170px;
     display: flex;
     align-items: center;
@@ -530,20 +509,16 @@ footer {
 
 .star .bx {
     font-size: 10px;
-    color: #E5E5E5;
+    color: rgb(229, 229, 229);
 }
 
 .star .bx.fill {
-    color: #FDCA15;
+    color: rgb(253, 202, 21);
 }
 
 .listName h5 {
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0.02em;
-    color: #000000;
+    color: rgb(0, 0, 0);
     opacity: 0.7;
     margin-bottom: 2px;
     font-weight: 600;
@@ -563,7 +538,7 @@ footer {
 .team-logo {
     width: 83px;
     height: 83px;
-    background: #F6F7F7;
+    background: rgb(246, 247, 247);
     border-radius: 100px;
     padding: 10px;
 }
@@ -571,7 +546,7 @@ footer {
 .team-logo-xs {
     width: 42px;
     height: 42px;
-    background: #F6F7F7;
+    background: rgb(246, 247, 247);
     border-radius: 100px;
     padding: 5px;
 }
@@ -586,21 +561,20 @@ footer {
     line-height: 14px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #230026;
+    color: rgb(35, 0, 38);
     margin-bottom: 9px;
 }
 
 span.ui-slider-handle.ui-state-default.ui-corner-all {
     width: 15px;
     height: 15px;
-    background: #20728d;
-    outline: 0;
+    background: rgb(32, 114, 141);
+    outline: 0px;
     border-radius: 100px;
     display: inline-block;
     position: absolute;
     z-index: 2;
     cursor: default;
-    -ms-touch-action: none;
     touch-action: none;
     top: -5px;
 }
@@ -608,16 +582,16 @@ span.ui-slider-handle.ui-state-default.ui-corner-all {
 .ui-slider-range.ui-widget-header.ui-corner-all {
     width: 82px;
     height: 4px;
-    background: #31EA44;
+    background: rgb(49, 234, 68);
     border-radius: 20px;
 }
 
 div#mySlider {
     width: 162px;
     height: 4px;
-    background: #E5E5E5;
+    background: rgb(229, 229, 229);
     border-radius: 20px;
-    border: 0;
+    border: 0px;
     position: relative;
 }
 
@@ -628,7 +602,6 @@ div {}
 }
 
 div[data-role="rangeslider"] p {
-    /* display: none; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -638,19 +611,19 @@ div[data-role="rangeslider"] p {
 
 div[data-role="rangeslider"] {
     min-height: 23px;
-    margin: 0 0 0 19px;
+    margin: 0px 0px 0px 19px;
 }
 
 div[data-role="rangeslider"] p span {
     margin-top: 7px;
-    font-family: SF Pro Display;
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #230026;
+    color: rgb(35, 0, 38);
     position: relative;
 }
 
@@ -661,36 +634,36 @@ div[data-role="rangeslider"] p span {
     line-height: 14px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #230026;
+    color: rgb(35, 0, 38);
     position: absolute;
     top: 13px;
     left: 45%;
 }
 
 div[data-role="rangeslider"] p .span1 {
-    margin-left: -21px!important;
+    margin-left: -21px !important;
 }
 
 div[data-role="rangeslider"] p .span2 {
-    margin-right: -33px!important;
     position: relative;
+    margin-right: -33px !important;
 }
 
 .table .theme-dark th {
-    color: #fff;
-    background-color: #20728d;
-    border-color: #20728d;
+    color: rgb(255, 255, 255);
+    background-color: rgb(32, 114, 141);
+    border-color: rgb(32, 114, 141);
 }
 
 .vr {
     width: 1px;
     height: 28px;
-    background: #e9e9e9;
+    background: rgb(233, 233, 233);
 }
 
 .postLisitng {
     position: absolute;
-    top: 0;
+    top: 0px;
     right: 6px;
     min-height: 47px;
     display: flex;
@@ -701,12 +674,12 @@ div[data-role="rangeslider"] p .span2 {
     font-size: 16px;
     padding: 6px 22px;
     align-items: center;
-    background: #31EA44;
-    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    background: rgb(49, 234, 68);
+    box-shadow: rgba(50, 50, 71, 0.08) 0px 16px 16px, rgba(50, 50, 71, 0.08) 0px 24px 32px;
     border-color: transparent;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
 }
 
 .postLisitng .btn-round-xl i {
@@ -717,8 +690,7 @@ div[data-role="rangeslider"] p .span2 {
     font-size: 16px;
     padding: 6px 22px;
     align-items: center;
-    background: #29c839;
-    background: linear-gradient(90deg, rgba(115, 41, 22, 1) 0%, rgba(245, 98, 59, 1) 35%, rgba(191, 78, 48, 1) 100%);
+    background: linear-gradient(90deg, rgb(115, 41, 22) 0%, rgb(245, 98, 59) 35%, rgb(191, 78, 48) 100%);
     border-color: transparent;
 }
 
@@ -726,15 +698,10 @@ div[data-role="rangeslider"] p .span2 {
 .postLisitng .btn-round-xl:not(:disabled):not(.disabled).active,
 .postLisitng .btn-round-xl:not(:disabled):not(.disabled):active,
 .show>.postLisitng .btn-round-xl.dropdown-toggle {
-    color: #fff;
-    background: #29c839;
-    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    color: rgb(255, 255, 255);
+    background: rgb(41, 200, 57);
+    box-shadow: rgba(50, 50, 71, 0.08) 0px 16px 16px, rgba(50, 50, 71, 0.08) 0px 24px 32px;
 }
-
-
-/*************************
-Message bot
-*****************************************/
 
 .e-chat .chat {
     margin-top: auto;
@@ -743,36 +710,36 @@ Message bot
 
 .e-chat .e-chat .card {
     border-radius: 15px !important;
-    background-color: rgba(255, 255, 255, 0.40) !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .e-chat .contacts_body {
-    padding: 0.75rem 0 !important;
     overflow-y: auto;
     white-space: nowrap;
+    padding: 0.75rem 0px !important;
 }
 
 .e-chat .msg_card_body {
     overflow-y: auto;
-    background: #fff;
-    border: 1px solid #edeef0;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(237, 238, 240);
 }
 
 .e-chat .card-header {
-    border-radius: 15px 15px 0 0 !important;
-    border-bottom: 0 !important;
+    border-radius: 15px 15px 0px 0px !important;
+    border-bottom: 0px !important;
 }
 
 .e-chat .card-footer {
-    border-radius: 0 0 15px 15px !important;
-    border-top: 0 !important;
-    background: #edeef0;
+    background: rgb(237, 238, 240);
+    border-radius: 0px 0px 15px 15px !important;
+    border-top: 0px !important;
 }
 
 .e-chat .card-footer .input-group {
-    background: #fff;
+    background: rgb(255, 255, 255);
     border-radius: 100px;
-    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    box-shadow: rgba(50, 50, 71, 0.08) 0px 16px 16px, rgba(50, 50, 71, 0.08) 0px 24px 32px;
 }
 
 .e-chat .container {
@@ -780,9 +747,9 @@ Message bot
 }
 
 .e-chat .search {
-    border-radius: 15px 0 0 15px !important;
+    border-radius: 15px 0px 0px 15px !important;
     background-color: rgba(0, 0, 0, 0.3) !important;
-    border: 0 !important;
+    border: 0px !important;
     color: white !important;
 }
 
@@ -792,11 +759,11 @@ Message bot
 }
 
 .e-chat .type_msg {
-    background-color: rgba(255, 255, 255, 0.30) !important;
-    border: 0 !important;
-    color: #000000 !important;
-    height: 70px !important;
     overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border: 0px !important;
+    color: rgb(0, 0, 0) !important;
+    height: 70px !important;
 }
 
 .e-chat .type_msg:focus {
@@ -805,41 +772,41 @@ Message bot
 }
 
 .e-chat .input-group-text.attach_btn {
-    border-radius: 100px 0 0 100px!important;
-    background-color: rgba(255, 255, 255, 0.40) !important;
-    color: white !important;
     cursor: pointer;
-    border: 0;
+    border: 0px;
+    border-radius: 100px 0px 0px 100px !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: white !important;
 }
 
 .e-chat .attach_btn i {
-    color: #555555;
+    color: rgb(85, 85, 85);
 }
 
 .e-chat .send_btn {
     border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.40) !important;
-    color: #20728d !important;
     cursor: pointer;
-    border: 0;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    color: rgb(32, 114, 141) !important;
 }
 
 .e-chat .search_btn {
-    border-radius: 0 15px 15px 0 !important;
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    border: 0 !important;
-    color: white !important;
     cursor: pointer;
+    border-radius: 0px 15px 15px 0px !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0px !important;
+    color: white !important;
 }
 
 .e-chat .contacts {
     list-style: none;
-    padding: 0;
+    padding: 0px;
 }
 
 .e-chat .contacts li {
-    width: 100% !important;
     padding: 5px 10px;
+    width: 100% !important;
     margin-bottom: 15px !important;
 }
 
@@ -850,13 +817,13 @@ Message bot
 .e-chat .user_img {
     height: 70px;
     width: 70px;
-    border: 1.5px solid #f5f6fa;
+    border: 1.5px solid rgb(245, 246, 250);
 }
 
 .e-chat .user_img_msg {
     height: 40px;
     width: 40px;
-    border: 1.5px solid #f5f6fa;
+    border: 1.5px solid rgb(245, 246, 250);
 }
 
 .e-chat .img_cont {
@@ -874,7 +841,7 @@ Message bot
     position: absolute;
     height: 15px;
     width: 15px;
-    background-color: #4cd137;
+    background-color: rgb(76, 209, 55);
     border-radius: 50%;
     bottom: 0.2em;
     right: 0.4em;
@@ -882,7 +849,7 @@ Message bot
 }
 
 .offline {
-    background-color: #c23616 !important;
+    background-color: rgb(194, 54, 22) !important;
 }
 
 .user_info {
@@ -892,7 +859,7 @@ Message bot
 }
 
 .user_info span {
-    color: #20728d;
+    color: rgb(32, 114, 141);
     font-style: normal;
     opacity: 0.7;
     margin-bottom: 2px;
@@ -907,8 +874,8 @@ Message bot
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.02em;
-    color: #230026;
-    margin: 4px 0 0 0;
+    color: rgb(35, 0, 38);
+    margin: 4px 0px 0px;
     max-width: 170px;
     display: flex;
     align-items: center;
@@ -920,53 +887,54 @@ Message bot
 }
 
 .video_cam span {
-    color: #20728d;
+    color: rgb(32, 114, 141);
     font-size: 30px;
     cursor: pointer;
     margin-right: 20px;
 }
 
-.msg_cotainer, .msg_cotainer_send {
+.msg_cotainer,
+.msg_cotainer_send {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
     border-radius: 25px;
     padding: 10px 20px;
     position: relative;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
     min-width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem !important;
 }
 
 .msg_cotainer {
     background-color: rgba(32, 114, 141, 0.64);
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .msg_cotainer_send {
-    background-color: #efefef;
+    background-color: rgb(239, 239, 239);
 }
 
 .msg_time {
     position: absolute;
-    left: 0;
+    left: 0px;
     bottom: -20px;
-    color: #828282;
+    color: rgb(130, 130, 130);
     font-size: 12px;
-    margin: 0;
+    margin: 0px;
 }
 
 .msg_time_send {
     position: absolute;
-    right: 0;
+    right: 0px;
     bottom: -20px;
-    color: #828282;
+    color: rgb(130, 130, 130);
     font-size: 12px;
 }
 
 .msg_head {
     position: relative;
-    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
-    background: #ffffff;
+    box-shadow: rgba(50, 50, 71, 0.08) 0px 16px 16px, rgba(50, 50, 71, 0.08) 0px 24px 32px;
+    background: rgb(255, 255, 255);
 }
 
 #action_menu_btn {
@@ -981,7 +949,7 @@ Message bot
 .action_menu {
     z-index: 1;
     position: absolute;
-    padding: 15px 0;
+    padding: 15px 0px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border-radius: 15px;
@@ -992,14 +960,13 @@ Message bot
 
 .action_menu ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .action_menu ul li {
     width: 100%;
     padding: 10px 15px;
-    ca margin-bottom: 5px;
 }
 
 .action_menu ul li i {
@@ -1014,8 +981,8 @@ Message bot
 .round2 {
     width: 40px;
     height: 40px;
-    background: #C4C4C4;
-    border: 1px solid #FFFFFF;
+    background: rgb(196, 196, 196);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 100px;
 }
 
@@ -1026,7 +993,7 @@ Message bot
 }
 
 .e-chat .card {
-    border: 0;
+    border: 0px;
     margin-bottom: 30px;
 }
 
@@ -1037,60 +1004,62 @@ Message bot
 }
 
 .file-upload-wrapper i {
-    content: 'Upload';
+    content: "Upload";
     display: inline-block;
     height: 60px;
     background: transparent;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-weight: 700;
-    z-index: 25;
     font-size: 16px;
     line-height: 60px;
-    padding: 0 15px;
+    padding: 0px 15px;
     text-transform: uppercase;
     pointer-events: none;
     position: relative;
     z-index: 0;
 }
 
-.file-upload-wrapper:hover:before {
-    background: #3d8c63;
+.file-upload-wrapper:hover::before {
+    background: rgb(61, 140, 99);
 }
 
 .file-upload-wrapper input {
     opacity: 0;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
     height: 60px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     display: block;
     cursor: pointer;
     width: 100%;
     z-index: 99999;
 }
 
-.context-dark, .bg-gray-dark, .bg-primary {
+.context-dark,
+.bg-gray-dark,
+.bg-primary {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
-    color: #ffffff;
+.footer-classic a,
+.footer-classic a:focus,
+.footer-classic a:active {
+    color: rgb(255, 255, 255);
 }
+
 .footer-classic .nav-list li {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
     display: inline-block;
 }
 
 .footer-classic .nav-list li a {
-    padding-top: 0;
     display: flex;
-    background: #3090b0;
+    background: rgb(48, 144, 176);
     padding: 1px 9px;
     border-radius: 100px;
     margin: 1px 0px;
@@ -1100,26 +1069,27 @@ Message bot
     font-size: 12px;
 }
 
-.footer-classic .nav-list li a:hover:before {
-    margin-left: 0;
+.footer-classic .nav-list li a:hover::before {
+    margin-left: 0px;
     opacity: 1;
     visibility: visible;
 }
 
-.footer-classic ul,.footer-classic  ol {
+.footer-classic ul,
+.footer-classic ol {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
-footer dd, footer dt {
-    margin: 0;
+footer dd,
+footer dt {
+    margin: 0px 0px 7px;
     line-height: normal;
-    margin-bottom: 7px;
 }
 
 footer dl {
-    margin: 0;
+    margin: 0px;
 }
 
 .social-inner {
@@ -1131,34 +1101,33 @@ footer dl {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
 }
+
 .social-container .col {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.nav-list li a:before {
-    content: "\e98a";
-    font: 400 21px/1 "boxicons";
-    color: #ffffff;
+.nav-list li a::before {
+    content: "";
+    font: 400 21px / 1 boxicons;
+    color: rgb(255, 255, 255);
     display: inline-block;
     vertical-align: baseline;
     margin-left: -28px;
     margin-right: 7px;
     opacity: 0;
     visibility: hidden;
-    transition: .22s ease;
+    transition: all 0.22s ease 0s;
 }
-
 
 footer dt {
     margin-top: 3px;
 }
 
-
 .teamList .fav-btn {
     position: absolute;
     z-index: 1;
     left: 58px;
-    top: -1px
+    top: -1px;
 }
 
 .fav-btn {
@@ -1167,11 +1136,11 @@ footer dt {
     font-size: 20px;
     text-align: center;
     justify-content: center;
-    background: #fff;
-    color: #20728d;
+    background: rgb(255, 255, 255);
+    color: rgb(32, 114, 141);
 }
 
 .fav-btn.fav-active {
-    background: #20728d;
-    color: #fff;
+    background: rgb(32, 114, 141);
+    color: rgb(255, 255, 255);
 }

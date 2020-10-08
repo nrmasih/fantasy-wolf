@@ -1,12 +1,13 @@
 <header>
     <nav class="sb-topnav navbar navbar-expand navbar-light bg-theme shadow-sm">
         <button class="d-lg-none d-inline btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="javaScript:void(0)">
-            <span class="bx bx-menu"></span> 
+            <span class="bx bx-chat bx-2x"></span>
         </button><!-- Navbar Search-->
-        <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-            <img src="<?php echo e(asset('assets/images/'.$gs->footer_logo)); ?>" alt="Logo" data-aos="zoom-in" width="116px">
+        <a class="order-2 order-lg-0 navbar-brand" href="<?php echo e(url('/')); ?>">
+            <!-- <img src="<?php echo e(asset('assets/images/'.$gs->footer_logo)); ?>" alt="Logo" data-aos="zoom-in" width="116px"> -->
+            <img src="https://www.valere.io/fantasy/public/assets/images/logo.png" alt="Logo" data-aos="zoom-in" width="116px">
         </a>
-        <ul class="navbar-nav ml-auto">
+        <ul class=" order-3 order-lg-0 navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link text-white" href="<?php echo e(url('/')); ?>">Home</a>
             </li>
@@ -17,7 +18,7 @@
                 <a target="_blank" class="nav-link text-white" href="<?php echo e(url('/contact-us')); ?>">Contact Us</a>
             </li>
         </ul>
-        <div class="d-md-inline-block form-inline">
+        <div class=" order-4 order-lg-0 d-md-inline-block form-inline">
             <div class="notiBox">
                 <div class="dropdown py-0">
                     <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" aria-expanded="false" class="btn text-white border-right border-radius-0">
@@ -76,7 +77,7 @@
             </div>
         </div>
         <!-- Navbar-->
-        <ul class="navbar-nav ml-auto ml-md-0">
+        <ul class=" order-5 order-lg-0 navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
                 <a class="py-0 media dtan pl-0 text-white align-items-center nav-link dropdown-toggle" id="userDropdown" href="javaScript:void(0)" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media-body mr-2 font-13 sf-re">Jeanette Shelton</div>

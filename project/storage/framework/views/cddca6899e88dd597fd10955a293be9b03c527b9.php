@@ -47,7 +47,7 @@
                                           <h5 class="mb-0"> <?php echo e(Auth::user()->name); ?> </h5>
                                           <div class="des">
                                              <p><i class="bx bx-mail-send mr-1 h6 mb-0"></i> <?php echo e(Auth::user()->email); ?> </p>
-                                             <p><i class="h6 mb-0 mr-1">@</i> JeanetteShelton </p>
+                                             <p><i class="h6 mb-0 mr-1">@</i> <?php echo e(str_slug(Auth::user()->name)); ?> </p>
                                           </div>
                                        </div>
                                     </div>

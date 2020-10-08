@@ -3,6 +3,18 @@ body {
   font-weight: 200;
 }
 
+span.error {
+    color: #dc3545;
+    font-size: 13px;
+    float: left;
+    width: 100%;
+    order: 10;
+}
+
+.auth-section .fxt-form .form-control.error, .form-control.error {
+    border-color: #dc3545;
+}
+
 a {
   color: #20728d;
 }
@@ -705,4 +717,30 @@ p.new_project_desc_head {
 }
 .social-container {
     max-width: 350px;
+}
+
+
+.chosen-container-single .chosen-single {
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px)!important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5!important;
+    color: #495057!important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-width: 0 0 1px 0px!important;
+    border-radius: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    background: transparent!important;
+    min-height: 42px;
+    box-shadow: none!important;
+    display: flex!important;
+    align-items: center;
+}
+
+.chosen-container-single .chosen-single div {
+    height: 22px!important;
+    toP: 50%!important;
+    transform: translateY(-50%)!important;
 }
